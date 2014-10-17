@@ -5,6 +5,9 @@
  *      Author: David
  */
 
+#include <stdlib.h>
+#include <stdio.h>
+
 #ifndef FILESYSTEM_H_
 #define FILESYSTEM_H_
 
