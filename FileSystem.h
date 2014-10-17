@@ -7,22 +7,23 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <iostream>
 
 #ifndef FILESYSTEM_H_
 #define FILESYSTEM_H_
 
 class FileSystem {
 
-
 public:
 	FileSystem();
 	virtual ~FileSystem();
+	void setCurrDirectory(string temp);
+	string getCurrDirectory();
+	string getHomeDirectory();
+	HardDrive hd;
 private:
-	//FILE HardDrive;
-	void FormatHardDrive();
-	void AccessFiles();
-	void WriteSuperBlock(FILE * fin);
-	void WriteInodeBlock(FILE * fin);
+	string currentDirectory;
+	string homeDirectory;
 };
 
 #endif /* FILESYSTEM_H_ */

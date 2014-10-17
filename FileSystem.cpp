@@ -8,36 +8,29 @@
 #include "FileSystem.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include <iostream>
 
 FileSystem::FileSystem() {
 	// TODO Auto-generated constructor stub
-
+	hd = new HardDrive();
 }
 
 FileSystem::~FileSystem() {
 	// TODO Auto-generated destructor stub
 }
 
-void FileSystem::FormatHardDrive()
+string FileSystem::getCurrDirectory()
 {
-	FILE * fin = fopen("data.bin", "w+");
-
-	fclose(fin);
+	return curremtDirectory;
 }
 
-void FileSystem::AccessFiles()
+string FileSystem::getHomeDirectory()
 {
-
+	return homeDirectory;
 }
 
-void FileSystem::WriteSuperBlock(FILE * fin)
+void FileSystem::setCurrDirectory(string temp)
 {
-
+	curremtDirectory = temp;
 }
-
-void FileSystem::WriteInodeBlock(FILE * fin)
-{
-
-}
-
 

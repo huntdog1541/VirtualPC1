@@ -9,7 +9,7 @@
 
 Kernel::Kernel() {
 	// TODO Auto-generated constructor stub
-
+	fs = new FileSystem();
 }
 
 Kernel::~Kernel() {

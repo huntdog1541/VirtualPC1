@@ -7,9 +7,11 @@
 //============================================================================
 
 #include <iostream>
+#include "Kernel.h"
 using namespace std;
 
 int main() {
 	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
+	Kernel kn = new Kernel();
 	return 0;
 }
