@@ -1,18 +1,18 @@
 /*
- * FileSystem.cpp
+ * FileN.cpp
  *
  *  Created on: Oct 29, 2014
  *      Author: dhunt
  */
 
-#include "FileSystem.h"
+#include "FileN.h"
 
-FileSystem::FileSystem() {
+FileN::FileN() {
 	// TODO Auto-generated constructor stub
 
 }
 
-FileSystem::~FileSystem() {
+FileN::~FileN() {
 	// TODO Auto-generated destructor stub
 }
 

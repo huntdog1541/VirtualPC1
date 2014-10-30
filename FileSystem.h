@@ -1,29 +1,24 @@
 /*
  * FileSystem.h
  *
- *  Created on: Oct 16, 2014
- *      Author: David
+ *  Created on: Oct 29, 2014
+ *      Author: dhunt
  */
+#include <string>
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <iostream>
+using namespace std;
 
 #ifndef FILESYSTEM_H_
 #define FILESYSTEM_H_
 
 class FileSystem {
-
 public:
 	FileSystem();
 	virtual ~FileSystem();
-	void setCurrDirectory(string temp);
-	string getCurrDirectory();
-	string getHomeDirectory();
-	HardDrive hd;
 private:
 	string currentDirectory;
-	string homeDirectory;
+	string home;
+	string currentFile;
 };
 
 #endif /* FILESYSTEM_H_ */

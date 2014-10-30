@@ -1,33 +1,38 @@
 /*
  * HardDrive.h
  *
- *  Created on: Oct 17, 2014
- *      Author: David
+ *  Created on: Oct 29, 2014
+ *      Author: dhunt
  */
-
-#include "SuperBlock.h"
-#include <stdio.h>
-#include <stdlib.h>
+#include <iostream>
+#include "FileN.h"
 
 #ifndef HARDDRIVE_H_
 #define HARDDRIVE_H_
-
-namespace std {
 
 class HardDrive {
 public:
 	HardDrive();
 	virtual ~HardDrive();
+	void openHardDrive();
+	void readHardDrive();
+	void writeHardDrive();
+	void createHardDrive();
+	void readSuperBlock();
+	void readInode();
+	void writeSuperBlock();
+	void writeInode();
+	void ReadFromHardDrive(char * buf, int blockNum);
+	void WriteToHardDrive(char * buf, int blockNum);
+	void closeHardDrive();
+	bool isOpen();
 
 private:
-	SuperBlock sb;
-	void FormatHardDrive();
-	void AccessFiles();
-	void WriteSuperBlock(FILE * fin);
-	void WriteInodeBlock(FILE * fin);
-	void initHardDrive();
+	char * superblock;
+	char * inode;
+	char * currentBlock;
+	FileN * currentFile;
+	FILE * fin;
 };
-
-} /* namespace std */
 
 #endif /* HARDDRIVE_H_ */
