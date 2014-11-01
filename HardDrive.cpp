@@ -51,7 +51,7 @@ void HardDrive::createHardDrive()
 	{
 		for (i = 0; i < (BLOCK_SIZE-4); i++)
 		{
-			hd[i] = i;
+			hd[i] = 0;
 		}
 		fwrite(hd, sizeof(char), sizeof(hd), fin);
 		fwrite(&j, sizeof(int), sizeof(int), fin);
